@@ -1,0 +1,29 @@
+// MIXINS
+@mixin listnull {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+// COLORS
+$text-color: #282b54;
+$primary: #0e1c4c;
+$CTA: #32ad67;
+$accent: #5262ee;
+
+$Success: #68f4b9;
+$Error: #f55d66;
+$Links: #49aff9;
+
+// BRAKEPOINTS
+$breakpoint-min-sm: 576px;
+$breakpoint-min-md: 768px;
+$breakpoint-min-lg: 992px;
+$breakpoint-min-xl: 1200px;
+$breakpoint-min-xxl: 1400px;
+$breakpoint-max-xs: $breakpoint-min-sm - 1px;
+$breakpoint-max-sm: $breakpoint-min-md - 1px;
+$breakpoint-max-md: $breakpoint-min-lg - 1px;
+$breakpoint-max-lg: $breakpoint-min-xl - 1px;
+$breakpoint-max-xl: $breakpoint-min-xxl - 1px;

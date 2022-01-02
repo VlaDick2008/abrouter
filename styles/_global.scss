@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+// COMMON
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: $text-color;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+h3 {
+  color: $accent;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  color: rgba(13, 14, 80, 0.6);
+}
+
+.outer-wrapper {
+  padding: 100px 250px;
+}
+
+.btn {
+  background-color: $CTA;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.small-button {
+  padding: 20px 55px;
+}
+
+.big-button {
+  padding: 20px 100px;
+}
+
+.sign-up-button {
+  padding: 15px 25px;
+  font-size: 15px;
+}
+
+.sign-in-button {
+  background-color: transparent;
+  padding: 15px 25px;
+  font-size: 15px;
+}
+
+.explore-button {
+  color: $CTA;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.start-trial-btn {
+  padding: 20px 100px;
+  transition: all 0.4s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.tab-img {
+  box-shadow: 0px 34px 80px rgba(11, 5, 47, 0.07);
+  border-radius: 20px;
+  // min-width: 700px;
+  // height: 407px;
+  // object-fit: cover;
+}
+
+.tab {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.active-tab {
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 4px solid $CTA;
+}
+
+.global-title {
+  text-align: center;
+}
+
+.global-subtitle {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.title-left {
+  text-align: left;
+}
+
+.title-center {
+  text-align: center;
+}
