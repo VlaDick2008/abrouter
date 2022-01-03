@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
@@ -8,8 +9,25 @@ import companyLogo2 from '../public/company-logo2.webp';
 import headerImg from '../public/header-img.webp';
 import logo from '../public/logo.webp';
 import logoDark from '../public/logo-dark.webp';
+import prekol1 from '../public/prekol1.jpg';
+import prekol2 from '../public/prekol2.png';
+
+
 
 const LandingPage: NextPage = () => {
+  const [firstTabsValue, setFirstValue] = React.useState(2);
+  const [secondTabsValue, setSecondValue] = React.useState(4);
+
+
+  
+  const handleChangeFirst = (index: number) => {
+    setFirstValue(index);
+  };
+
+  const handleChangeSecond = (index: number) => {
+    setSecondValue(index);
+  };
+
   return (
     <div>
       <header className="header-wrapper">
@@ -170,13 +188,15 @@ const LandingPage: NextPage = () => {
               <button className="btn explore-button">Explore ABRouter ></button>
             </div>
             <div className="tab-img-block">
-              {/* <img className="tab-img" src="./img/about-img.png" alt="" /> */}
-              <div className="tab-img">
+              <div className={firstTabsValue === 1 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={523} height={407} alt="about" src={prekol1 } />
+              </div>
+              <div className={firstTabsValue === 2 ? "tab-img tab-img-active" : "tab-img"}>
                 <Image layout="fixed" width={523} height={407} alt="about" src={aboutImg} />
               </div>
               <div className="tabs-wrapper">
-                <div className="tab">Management interface</div>
-                <div className="tab active-tab">API Interface</div>
+                <div onClick={() => handleChangeFirst(1)} className={firstTabsValue === 1 ? "tab active-tab" : "tab"}>Management interface</div>
+                <div onClick={() => handleChangeFirst(2)} className={firstTabsValue === 2 ? "tab active-tab" : "tab"}>API Interface</div>
               </div>
             </div>
           </div>
@@ -274,14 +294,27 @@ const LandingPage: NextPage = () => {
               <button className="btn explore-button">Explore ABRouter ></button>
             </div>
             <div className="tab-img-block">
-              <img className="tab-img" src="./img/about-img2.png" alt="" />
-              <Image layout="fixed" width={687} height={373} alt="about" src={aboutImg2} />
+              <div className={secondTabsValue === 3 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={687} height={373} alt="about" src={prekol1 } />
+              </div>
+              <div className={secondTabsValue === 4 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={687} height={373} alt="about" src={aboutImg2} />
+              </div>
+              <div className={secondTabsValue === 5 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={687} height={373} alt="about" src={prekol2} />
+              </div>
+              <div className={secondTabsValue === 6 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={687} height={373} alt="about" src={aboutImg2} />
+              </div>
+              <div className={secondTabsValue === 7 ? "tab-img tab-img-active" : "tab-img"}>
+                <Image layout="fixed" width={687} height={373} alt="about" src={aboutImg} />
+              </div>
               <div className="tabs-wrapper">
-                <div className="tab active-tab">What is ABRouter?</div>
-                <div className="tab">Experiments</div>
-                <div className="tab">Branch</div>
-                <div className="tab">Easy to manage</div>
-                <div className="tab">Best price</div>
+                <div onClick={() => handleChangeSecond(3)} className={secondTabsValue === 3 ? "tab active-tab" : "tab"}>What is ABRouter?</div>
+                <div onClick={() => handleChangeSecond(4)} className={secondTabsValue === 4 ? "tab active-tab" : "tab"}>Experiments</div>
+                <div onClick={() => handleChangeSecond(5)} className={secondTabsValue === 5 ? "tab active-tab" : "tab"}>Branch</div>
+                <div onClick={() => handleChangeSecond(6)} className={secondTabsValue === 6 ? "tab active-tab" : "tab"}>Easy to manage</div>
+                <div onClick={() => handleChangeSecond(7)} className={secondTabsValue === 7 ? "tab active-tab" : "tab"}>Best price</div>
               </div>
             </div>
           </div>
