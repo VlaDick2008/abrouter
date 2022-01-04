@@ -1,0 +1,54 @@
+.contentHeader {
+  margin: 40px 0;
+}
+
+.contentHeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80vw;
+}
+
+.tokenField {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.searchBtn {
+  margin-right: 20px;
+}
+
+.notificationsBtn {
+  margin-right: 20px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.username {
+  font-weight: 700;
+  color: #0b0e37;
+  svg {
+    margin-right: 60px;
+    margin-left: 10px;
+  }
+}
+
+.contentBlock {
+  padding: 0 40px;
+}

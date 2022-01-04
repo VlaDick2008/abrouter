@@ -2,6 +2,8 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
+import {useRouter} from 'next/router'
+
 import aboutImg from '../public/about-img.webp';
 import aboutImg2 from '../public/about-img2.webp';
 import companyLogo1 from '../public/company-logo1.webp';
@@ -11,6 +13,8 @@ import logo from '../public/logo.webp';
 import logoDark from '../public/logo-dark.webp';
 import prekol1 from '../public/prekol1.jpg';
 import prekol2 from '../public/prekol2.png';
+import Footer from '../components/Footer';
+import LandingPageLayout from '../components/layouts/landing';
 
 
 
@@ -18,8 +22,6 @@ const LandingPage: NextPage = () => {
   const [firstTabsValue, setFirstValue] = React.useState(2);
   const [secondTabsValue, setSecondValue] = React.useState(4);
 
-
-  
   const handleChangeFirst = (index: number) => {
     setFirstValue(index);
   };
@@ -656,64 +658,6 @@ const LandingPage: NextPage = () => {
           <button className="btn small-button">Start free trial</button>
         </div>
       </main>
-      <footer className="footer-wrapper">
-        <div className="outer-wrapper footer-inner-wrapper">
-          <div className="footer-blocks">
-            <div className="footer-item">
-              <div className="logo">
-                <Image className="site-logo" layout="fixed" alt="logo" src={logoDark} />
-              </div>
-            </div>
-            <div className="footer-item">
-              <ul className="footer-links">
-                <li className="footer-links-item footer-links-item-title">Product</li>
-                <li className="footer-links-item">
-                  <a href="#">Product overview</a>
-                </li>
-                <li className="footer-links-item">
-                  <a href="#">Why us</a>
-                </li>
-                <li className="footer-links-item">
-                  <a href="#">Pricing</a>
-                </li>
-                <li className="footer-links-item">
-                  <a href="#">Docs</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-item">
-              <ul className="footer-links">
-                <li className="footer-links-item footer-links-item-title">A/B tests</li>
-                <li className="footer-links-item">
-                  <a href="#">Implement A/B tests Laravel</a>
-                </li>
-                <li className="footer-links-item">
-                  <a href="#">Implement A/B tests PHP</a>
-                </li>
-              </ul>
-            </div>
-            <div className="footer-item">
-              <ul className="footer-links">
-                <li className="footer-links-item footer-links-item-title">Support</li>
-                <li className="footer-links-item">
-                  <a href="#">abrouter@prixedmail.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="copyright-block">
-            <div className="copyright-text">© ABROUTER 2021. All rights reserved.</div>
-            <div className="copyright-privacy-and-terms">
-              <div className="privacy">
-                <a href="#">Privacy Policy</a>
-              </div>
-              <div className="terms">
-                <a href="#">Terms & Conditions</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
